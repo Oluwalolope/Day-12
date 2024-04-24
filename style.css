@@ -1,0 +1,42 @@
+:root {
+    /* color */
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-primary: hsl(217, 12%, 63%);
+    --clr-secondary: hsl(217, 12%, 63%);
+    --clr-accent: hsl(25, 97%, 53%);
+
+    /* background color */
+    --bg-container: hsl(213, 19%, 18%);
+    --bg-body: hsl(216, 12%, 8%);
+
+    /* font size */
+    --fs-h1: 1.3125rem;
+    --fs-p: .9375rem;
+    --fs-btn: ;
+
+    /* font family */
+    --ff: "Overpass", sans-serif;
+
+    /* font weight */
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+.response--state {
+    display: none;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    background-color: var(--bg-body);
+}
+
+.container {
+    width: 18.75rem;
+    height: 18.75rem;
+    background-color: var(--bg-container);
+    border-radius: 12px;
+}
+
