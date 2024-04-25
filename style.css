@@ -8,11 +8,13 @@
     /* background color */
     --bg-container: hsl(213, 19%, 18%);
     --bg-body: hsl(216, 12%, 8%);
+    --bg-btn: hsla(214, 21%, 13%, 0.5);
 
     /* font size */
-    --fs-h1: 1.3125rem;
+    --fs-h1: 1.4rem;
+    --fs-h2: 1.25rem;
     --fs-p: .9375rem;
-    --fs-btn: ;
+    --fs-btn: 1rem;
 
     /* font family */
     --ff: "Overpass", sans-serif;
@@ -22,21 +24,140 @@
     --fw-bold: 700;
 }
 
-.response--state {
-    display: none;
-}
-
 body {
     display: grid;
+    grid-template-rows: 1fr auto;
     min-height: 100vh;
     place-items: center;
     background-color: var(--bg-body);
+    font-family: var(--ff);
 }
 
 .container {
     width: 18.75rem;
     height: 18.75rem;
     background-color: var(--bg-container);
-    border-radius: 12px;
+    border-radius: .75rem;
+    box-sizing: border-box;
+    padding: 1rem;
 }
 
+/* ----------rating state start------------ */
+.rating--state {
+    display: flex; /* change to flex later*/
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.ratings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rating--state img {
+    background-color: var(--bg-btn);
+    padding: .75rem;
+    box-sizing: border-box;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
+    color: var(--clr-white);
+}
+
+p {
+    font-size: var(--fs-p);
+    font-weight: var(--fw-regular);
+    color: var(--clr-secondary);
+    line-height: 1.2rem;
+}
+
+li {
+    background-color: var(--bg-btn);
+    color: var(--clr-secondary);
+    padding: .75rem;
+    box-sizing: border-box;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+li:hover{
+    cursor: pointer;
+    color: var(--clr-white);
+    background-color: var(--clr-accent);
+    transition: 150ms ease-in-out;
+}
+li:has(+ li:hover) {
+    background-color: gray;
+    color: var(--clr-white);
+    transition: 160ms ease-in-out;
+}
+
+button {
+    color: var(--clr-white);
+    background-color: var(--clr-accent);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    width: 100%;
+    padding: .5rem 1rem;
+    font-size: var(--fs-btn);
+    font-weight: var(--fw-regular);
+    text-transform: uppercase;
+}
+button:hover {
+    cursor: pointer;
+    background-color: var(--clr-white);
+    color: var(--clr-accent);
+    transition: 150ms ease-in-out;
+}
+/* ------------rating state end------------ */
+
+/*-----------start of response state------------- */
+.response--state {
+    display: none; /* change to flex later*/
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating {
+    background-color: var(--bg-btn);
+    border-radius: .75rem;
+    color: var(--clr-accent);
+    padding: .4rem .8rem;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: var(--clr-white);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+}
+
+.response--state p {
+    text-align: center;
+}
+/*-----------end of response state------------- */
+
+
+/*-----------start of attribution------------- */
+.attribution { 
+    font-size: .875rem; 
+    color: var(--clr-white);
+    text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+/*------------end of attribution------------- */
