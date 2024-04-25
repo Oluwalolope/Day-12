@@ -101,6 +101,10 @@ li:has(+ li:hover) {
     color: var(--clr-white);
     transition: 160ms ease-in-out;
 }
+.selected {
+    color: var(--clr-white);
+    background-color: var(--clr-accent);
+}
 
 button {
     color: var(--clr-white);
